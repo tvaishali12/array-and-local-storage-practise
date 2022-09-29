@@ -1,0 +1,34 @@
+<!-- push method is used for adding a new element at the end  of array  -->
+<!-- and change the length of array -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let array = ["vaishali", 30, "hello", [1, 2, "thakur"]];
+    // add new element at the end
+
+    array.push("vishakha", 20);
+    console.log(array);
+
+    array[3].push("vishakha", 20, [1, 2]);
+    console.log(array);
+
+    // override or change an array element
+    const arr = ["vaishali", 30, "hello", [1, 2, "thakur"]];
+    arr[1] = 300;
+    arr[3] = ["new"];
+    arr[3][0] = "newone";
+    console.log(arr);
+
+    //   use  loop to print array
+    for (let i = 0; i < array.length; i++) {
+      console.log(array[i]);
+    }
+  </script>
+</html>

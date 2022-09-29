@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <button id="btn" onclick="addnewuser()">Adduser</button>
+  </body>
+  <script>
+    const list = [
+      {
+        name: "vaishali",
+        classes: "1",
+      },
+      {
+        name: "a",
+        classes: "2",
+      },
+      {
+        name: "b",
+        classes: "3",
+      },
+      {
+        name: "c",
+        classes: "4",
+      },
+    ];
+    const container = document.getElementById("container");
+    for (let i = 0; i < list.length; i++) {
+      addnewuser(list[i].name, list[i].classes);
+
+      function addnewuser(name = "annu", classes = "5") {
+        const div = document.createElement("div");
+        div.className = "div";
+        const para1 = document.createElement("p");
+        para1.innerText = name;
+        const para2 = document.createElement("p");
+        para2.innerText = classes;
+        const btn2 = document.createElement("button");
+        btn2.innerText = "remove";
+        btn2.addEventListener("click", () => {
+          div.remove();
+          return;
+        });
+        div.appendChild(para1);
+        div.appendChild(para2);
+        div.appendChild(btn2);
+        container.appendChild(div);
+      }
+    }
+  </script>
+</html>
